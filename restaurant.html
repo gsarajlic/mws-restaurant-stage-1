@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <!-- Main CSS file -->
@@ -14,13 +15,20 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1>
+        <a href="/">Restaurant Reviews</a>
+      </h1>
+      <a href="#restaurant-container" class="skip-link">
+        Skip to main content
+      </a>
+      <!-- Beginning breadcrumb -->
+      <ul id="breadcrumb">
+        <li>
+          <a href="/">Home</a>
+        </li>
+      </ul>
+      <!-- End breadcrumb -->
     </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
-    </ul>
-    <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
   <!-- End header -->
@@ -28,7 +36,7 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container">
+    <section id="map-container" role="application" title="Restaurant map" aria-label="Restaurant map">
       <div id="map"></div>
     </section>
     <!-- End map -->
@@ -51,7 +59,7 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
 

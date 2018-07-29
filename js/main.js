@@ -176,3 +176,18 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+
+// Registering Service Worker for offline use right after page is loaded
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  if (!navigator.serviceWorker) return;
+
+  navigator.serviceWorker.register('sw.js').then(() => {
+    console.log('Registration worked!');
+  }).catch(() => {
+    console.log('Registration failed!');
+  });
+  fetchNeighborhoods();
+  fetchCuisines();
+});
