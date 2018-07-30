@@ -46,7 +46,7 @@ h4,
 h5,
 h6 {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 0 20px;
+  margin: auto;
 }
 
 article,
@@ -89,7 +89,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 20px;
+  padding-top: auto;
 }
 
 nav h1 {
@@ -186,7 +186,7 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 40%;
+  width: 70%;
 
 }
 
@@ -375,6 +375,22 @@ nav h1 a {
 
 /* ====================== MEDIA QUERRIES ====================== */
 
+
+@media only screen and (max-width: 400px) {
+  
+  header nav {
+    order: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .filter-options select {
+    width:
+  }
+
+}
+
+
 @media only screen and (max-width: 600px) {
   .inside {
     display: flex;
@@ -388,9 +404,13 @@ nav h1 a {
   header {
     display: flex;
     flex-direction: column;
+    padding-top: 5px;
   }
   header nav {
     order: 0;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
   }
   header #breadcrumb {
     order: 1;
